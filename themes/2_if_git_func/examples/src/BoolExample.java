@@ -5,6 +5,28 @@ public class BoolExample {
         int y = 123;
 
 
+        boolean result = (x != y);
+
+        // операции сранения
+        // >, >=, <, <= , ==, !=
+        // логические операции
+        // &&, ||
+
+        boolean A = true;
+        boolean B = false;
+
+        // A && B == false
+        // A || B == true
+
+        // !(A && B) == true
+        // !(A || B) == false
+
+        // !(A && B) == A || B
+        // !(A || B) == A && B
+
+
+
+
         boolean condition = (100 > 110);
 
       //  System.out.println(condition);
