@@ -61,6 +61,10 @@ public class Calculator {
     }
 
 
+    public static void run(){
+        main(null);
+    }
+
         /*System.out.println(a);
         System.out.println(c);
         System.out.println(b);*/
