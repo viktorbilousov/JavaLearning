@@ -18,17 +18,22 @@ public class Nine {
 }
 class Main {
     public static void main(String[] args) {
-        int res = numGen (1);
+        int res = numGen (-2);
         System.out.println( res);
     }
     public static int numGen (int input){
+
+        if( input < 0 ){
+            input *= -1;
+        }
+
         int num = input;
+
         for (int i = 0; i <= 3 ; i++) {
-
-            num = num * 10 + input;
-
+            num = num * 10 + input; //num += input * 10 //num += input * 10, num *= 10
         }
         return num;
+
     }
 
 }
@@ -46,6 +51,4 @@ res = a
 
 i=1
 res = res * 10 + a
-
-
  */
