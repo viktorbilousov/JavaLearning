@@ -26,6 +26,10 @@ class Main {
         if( input < 0 ){
             input *= -1;
         }
+        else if (input > 10){
+            System.out.println("Ошибка");
+            return -1;
+        }
 
         int num = input;
 

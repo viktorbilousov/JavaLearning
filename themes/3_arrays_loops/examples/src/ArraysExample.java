@@ -4,11 +4,18 @@ import java.util.Random;
 
 public class ArraysExample {
     public static void main(String[] args) {
-        int[] res = differences(new int[] { 1,2,8,4,5});
+       /* int[] res = differences(new int[] { 1,2,8,4,5});
         for (int i = 0; i < res.length; i++) {
             System.out.println(res[i]);
-        }
+        } */
+       int [] test  = new int[10];
+        test[0]=100;
+        test[2] =234;
+        test[3]=12;
+        printAll(test);
     }
+
+
 
 
     public static void example4Continue(){
@@ -52,7 +59,7 @@ public class ArraysExample {
     }
 
     public static void example3(){
-        int [] arr = new int[15];
+        int [] arr = new int[15]; // от 0 до 14
         for (int i = 0; i < arr.length ; i++) {
             arr[i] = i+1;
             // i = 0 : arr[0] = 1
@@ -116,7 +123,8 @@ public class ArraysExample {
     public static int calcSum(int a, int b){
         int sum = 0;
         for (int i = a; i <= b ; i++) {
-            sum += i;
+            sum = sum + i;
+
         }
         return sum;
     }
@@ -170,10 +178,15 @@ public class ArraysExample {
         System.out.println(a1); // 1
         System.out.println(b1[0]); // 2
     }
+    public static void printAll(int[] array){
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
 
     public static void printFirstAndLastElement(int[] array){
         System.out.println("first = " + array[0]);
-        System.out.println("last = " +array[array.length-1]);
+        System.out.println("last = " +array[ array.length-1 ]);
         // int a [3]
         // a.length = 3
         // a[2]
