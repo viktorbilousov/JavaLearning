@@ -1,4 +1,3 @@
-import com.sun.source.tree.BreakTree;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -10,7 +9,18 @@ public class ArrayCopy {
     public static void main(String[] args) {
 
 
+        int a = 100;
+        int b = a;
+
+        // 1) создать точную копию коробки
+        // 2) скопировать прежметы в первой коробке и наполнить ими копию оригинала (в том же порядке)
+
+
         int arr[] = new int[20];
+
+        int arr2 [] = arr;
+
+
         for (int i = 0; i < arr.length; i++) {
             arr[i] = new Random().nextInt(100);
         }
@@ -42,7 +52,15 @@ public class ArrayCopy {
 
     // {todo}: write this function without Arrays.copyOf()
     public static int[] copyArray(int[] array){
-        return Arrays.copyOf(array, array.length);
+        // 1) создать точную копию коробки
+        // 2) скопировать прежметы в первой коробке и наполнить ими копию оригинала (в том же порядке)
+
+        int copy [] = new int [array.length];
+        for (int i = 0; i < array.length; i++){
+            copy [i] = array [i];
+        }
+        return copy;
+
     }
 
     public static int getSumOfArray(int[] array){
