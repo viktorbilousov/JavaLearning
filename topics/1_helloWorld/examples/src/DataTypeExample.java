@@ -2,6 +2,14 @@
 public class DataTypeExample {
     public static void main(String[] args) {
         int a = 10;
+
+        byte b = 100;
+        short s = 30000;
+        int a = 2000000;
+        long l = 9000000000000000000L;
+
+
+        
         double b = 10d;
         double c = 10.0;
         char symb = '1'; // обрати внимание на ковычки !
