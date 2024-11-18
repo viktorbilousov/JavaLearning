@@ -11,6 +11,8 @@
 * Установка Java , JDK, Inltellij idea
 * Ознакомление с книгами
 
+* https://w3schools.com/java/java_data_types.asp
+
 ## Hello World и типы данных
 
 * Запустить первую программу 
