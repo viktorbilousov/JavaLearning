@@ -43,3 +43,18 @@
   * sec -> minutes -> hours -> days -> years 
   * days -> hours -> minutes -> sec
 
+```
+
+public class Main {
+    public static void main(String[] args) {
+
+        int sizeInBytes = 8124;
+        
+        System.out.println("bytes = " + sizeInBytes);
+        System.out.println("kb = " + sizeInBytes/1024);
+        //...
+        
+    }
+}
+
+```
