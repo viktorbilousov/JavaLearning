@@ -15,14 +15,14 @@ public class ReadFromConsole {
     public static String consoleInput(){
         Scanner scanner = new Scanner(System.in);
         String res = scanner.nextLine();
-        scanner.close();
+//        scanner.close();
         return res;
     }
 
     public static int consoleInputInt(){
         Scanner scanner = new Scanner(System.in);
         int res = scanner.nextInt();
-        scanner.close();
+//        scanner.close();
         return res;
     }
 

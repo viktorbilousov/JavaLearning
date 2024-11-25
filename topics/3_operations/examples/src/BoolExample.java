@@ -7,6 +7,9 @@ public class BoolExample {
 
         boolean result = (x != y);
 
+        // check type
+        boolean isString = "" instanceof String;
+
         // операции сранения
         // >, >=, <, <= , ==, !=
         // логические операции
