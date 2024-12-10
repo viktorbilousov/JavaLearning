@@ -9,24 +9,23 @@
 1. [What is a String in Java?](#1-what-is-a-string-in-java)
 2. [Creating Strings](#2-creating-strings)
 3. [Key String Methods](#3-key-string-methods)
-    - [length()](#a-length)
-    - [charAt(int index)](#b-charatint-index)
-    - [substring(int beginIndex, int endIndex)](#c-substringint-beginindex-int-endindex)
-    - [indexOf(String s) / lastIndexOf(String s)](#d-indexofstring-s--lastindexofstring-s)
-    - [toLowerCase() / toUpperCase()](#e-tolowercase--touppercase)
-    - [equals(String s) / equalsIgnoreCase(String s)](#f-equalsstring-s--equalsignorecasestring-s)
-    - [trim()](#g-trim)
-    - [replace(String oldChar, String newChar)](#h-replacestring-oldchar-string-newchar)
-    - [split(String regex)](#i-splitstring-regex)
-    - [contains(CharSequence s)](#j-containscharsequence-s)
-    - [startsWith(String prefix) / endsWith(String suffix)](#k-startswithstring-prefix--endswithstring-suffix)
+    - [length()](#length)
+    - [charAt(int index)](#charatint-index)
+    - [substring(int beginIndex, int endIndex)](#substringint-beginindex-int-endindex)
+    - [indexOf(String s) / lastIndexOf(String s)](#indexofstring-s--lastindexofstring-s)
+    - [toLowerCase() / toUpperCase()](#tolowercase--touppercase)
+    - [equals(String s) / equalsIgnoreCase(String s)](#equalsstring-s--equalsignorecasestring-s)
+    - [trim()](#trim)
+    - [replace(String oldChar, String newChar)](#replacestring-oldchar-string-newchar)
+    - [split(String regex)](#splitstring-regex)
+    - [contains(CharSequence s)](#containscharsequence-s)
+    - [startsWith(String prefix) / endsWith(String suffix)](#startswithstring-prefix--endswithstring-suffix)
 4. [Immutable Nature of Strings](#4-immutable-nature-of-strings)
-5. [Practical Examples](#5-practical-examples)
+5. [Practical Examples](#5-examples)
     - [Count Words in a Sentence](#example-1-count-words-in-a-sentence)
     - [Check for Palindrome](#example-2-check-for-palindrome)
     - [Format a String](#example-3-format-a-string)
 6. [Exercises](#6-exercises)
-7. [Conclusion](#7-conclusion)
 
 ---
 
@@ -158,7 +157,7 @@ System.out.println(original); // Output: Hello
 System.out.println(modified); // Output: Jello
 ```
 ## 5.  Examples
-Example 1: Count Words in a Sentence
+### Example 1: Count Words in a Sentence
 
 ``` java
 String sentence = "Java is a powerful programming language";
@@ -188,7 +187,7 @@ Practice your understanding of Java string methods with these exercises. They co
 
 ---
 
-## Exercises
+## 6. Exercises
 
 ### 1. Reverse Each Word in a Sentence
 Write a method to reverse each word in a given sentence while keeping the word order the same.  
