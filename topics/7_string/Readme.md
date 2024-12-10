@@ -1,12 +1,12 @@
-# Java String Methods: A Complete Guide
+#java String Methods: A Complete Guide
 
-**Objective:** This guide explains the most important string methods in Java, including practical examples and exercises to help you master string manipulation.
+**Objective:** This guide explains the most important string methods injava, including practical examples and exercises to help you master string manipulation.
 
 ---
 
 ## Table of Contents
 
-1. [What is a String in Java?](#1-what-is-a-string-in-java)
+1. [What is a String injava?](#1-what-is-a-string-in-java)
 2. [Creating Strings](#2-creating-strings)
 3. [Key String Methods](#3-key-string-methods)
     - [length()](#length)
@@ -29,9 +29,9 @@
 
 ---
 
-## 1. What is a String in Java?
+## 1. What is a String injava?
 
-In Java, a `String` is a sequence of characters. Strings are objects in Java, which means they come with many built-in methods to manipulate text.
+Injava, a `String` is a sequence of characters. Strings are objects injava, which means they come with many built-in methods to manipulate text.
 
 ---
 
@@ -46,8 +46,7 @@ String str2 = new String("Java Programming"); // Using `new` keyword
 ### length()
 Returns the number of characters in the string.
 
-``` java
-
+```java
 String str = "Hello";
 System.out.println(str.length()); // Output: 5
 ```
@@ -62,8 +61,7 @@ System.out.println(str.charAt(2)); // Output: v
 c) substring(int beginIndex, int endIndex)
 Extracts a portion of the string.
 
-``` java
-
+```java
 String str = "Hello, World!";
 System.out.println(str.substring(7, 12)); // Output: World
 ```
@@ -71,8 +69,7 @@ System.out.println(str.substring(7, 12)); // Output: World
 ### indexOf(String s) / lastIndexOf(String s)
 Finds the position of the first or last occurrence of a substring.
 
-``` java
-
+```java
 String str = "Java Programming";
 System.out.println(str.indexOf("a")); // Output: 1
 System.out.println(str.lastIndexOf("a")); // Output: 13
@@ -80,7 +77,7 @@ System.out.println(str.lastIndexOf("a")); // Output: 13
 ### toLowerCase() / toUpperCase()
 Converts all characters in the string to lowercase or uppercase.
 
-``` java
+```java
 
 String str = "Hello, World!";
 System.out.println(str.toLowerCase()); // Output: hello, world!
@@ -89,24 +86,24 @@ System.out.println(str.toUpperCase()); // Output: HELLO, WORLD!
 ### equals(String s) / equalsIgnoreCase(String s)
 Compares two strings for equality, optionally ignoring case.
 
-``` java
+```java
 String str1 = "Java";
-String str2 = "``` java";
+String str2 = "```java";
 System.out.println(str1.equals(str2)); // Output: false
 System.out.println(str1.equalsIgnoreCase(str2)); // Output: true
 ```
 ### trim()
 Removes leading and trailing whitespaces.
 
-``` java
+```java
 
-String str = "   Java   ";
-System.out.println(str.trim()); // Output: Java
+String str = "  java   ";
+System.out.println(str.trim()); // Output:java
 ```
 ### replace(String oldChar, String newChar)
 Replaces all occurrences of a substring with another.
 
-``` java
+```java
 
 String str = "banana";
 System.out.println(str.replace("a", "o")); // Output: bonono
@@ -114,7 +111,7 @@ System.out.println(str.replace("a", "o")); // Output: bonono
 ### split(String regex)
 Splits the string into an array based on the given delimiter.
 
-``` java
+```java
 
 String str = "Java,Python,C++";
 String[] languages = str.split(",");
@@ -122,7 +119,7 @@ for (String lang : languages) {
     System.out.println(lang);
 }
 // Output:
-// Java
+//java
 // Python
 // C++
 ```
@@ -130,26 +127,41 @@ for (String lang : languages) {
 ### contains(CharSequence s)
 Checks if the string contains a specific sequence of characters.
 
-``` java
-
+```java
 String str = "Hello, World!";
 System.out.println(str.contains("World")); // Output: true
 ```
 ### startsWith(String prefix) / endsWith(String suffix)
 Checks if the string starts or ends with a specific substring.
 
-``` java
+
+### isEmpty(), IsBlank()
+Checks String is empty 
+
+```java
+String empty = "";
+String space = " ";
+
+System.out.println(empty.lenght()); // 0
+System.out.println(empty.lenght() == 0); // true
+System.out.println(empty.isEmpty()); // true
+System.out.println(empty.isBlank()); // true
+
+```
+
+
+```java
 
 String str = "Java Programming";
 System.out.println(str.startsWith("Java")); // Output: true
 System.out.println(str.endsWith("Programming")); // Output: true
 ```
 ## 4. Immutable Nature of Strings
-Strings in Java are immutable, meaning once created, their content cannot be changed. Any method that modifies a string returns a new string object.
+Strings injava are immutable, meaning once created, their content cannot be changed. Any method that modifies a string returns a new string object.
 
 Example:
 
-``` java
+```java
 String original = "Hello";
 String modified = original.replace("H", "J");
 
@@ -159,14 +171,14 @@ System.out.println(modified); // Output: Jello
 ## 5.  Examples
 ### Example 1: Count Words in a Sentence
 
-``` java
+```java
 String sentence = "Java is a powerful programming language";
 String[] words = sentence.split(" ");
 System.out.println("Word count: " + words.length); // Output: 6
 ```
 
 ### Example 2: Check for Palindrome
-``` java
+```java
 
 String str = "madam";
 String reversed = new StringBuilder(str).reverse().toString();
@@ -174,16 +186,16 @@ System.out.println(str.equals(reversed)); // Output: true
 ```
 ### Example 3: Format a String
 
-``` java
+```java
 String name = "John";
 int age = 30;
 System.out.println(String.format("My name is %s and I am %d years old.", name, age));
 // Output: My name is John and I am 30 years old.
 ```
 
-# Exercises: String Manipulation in Java
+# Exercises: String Manipulation injava
 
-Practice your understanding of Java string methods with these exercises. They cover a wide range of string manipulation tasks, from basic operations to advanced challenges.
+Practice your understanding ofjava string methods with these exercises. They cover a wide range of string manipulation tasks, from basic operations to advanced challenges.
 
 ---
 
@@ -264,7 +276,7 @@ Write a method to count the number of words in a sentence that have a specific l
 ### 11. Sort Words in Alphabetical Order
 Write a program to sort all the words in a string alphabetically.  
 **Input:** `Java Python C++ Ruby`  
-**Output:** `C++ Java Python Ruby`
+**Output:** `C++java Python Ruby`
 
 ---
 
