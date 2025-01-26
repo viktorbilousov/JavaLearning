@@ -10,4 +10,8 @@ public class Dog extends Animal {
     public void makeSound() {
         System.out.println("Собака лает: Гав-гав");
     }
+
+    public String getCommnad(){
+        return "aport!";
+    }
 }
