@@ -51,6 +51,13 @@ Bob     25     Los Angeles
 
 ## Рекурсия
 * Напишите рекурсивный метод factorial, который принимает int n и возвращает факториал числа n.
+```text
+ 5! = 1*2*3*4*5
+ 0! = 1
+ 1! = 1
+ 7! = 1*2*3...*7
+```
+
 * Напишите рекурсивный метод fibonacci, который принимает число n и возвращает n-е число Фибоначчи.
 * Напишите рекурсивный метод `sumArray`, который возвращает сумму всех чисел в массиве.
   * Если массив пустой, вернуть `0`
@@ -59,6 +66,6 @@ Bob     25     Los Angeles
 ```java
 public static void main(String[] args) {
     int[] numbers = {1, 2, 3, 4, 5};
-    System.out.println(sumArray(numbers, 0)); // Вывод: 15
+    System.out.println(sumArray(numbers)); // Вывод: 15
 }
 ```

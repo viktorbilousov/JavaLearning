@@ -157,6 +157,10 @@ public void setAge(int age) throws InvalidAgeException {
 2. **Несколько Исключений**
     - Напишите программу, которая считывает целое число и индекс массива от пользователя. Обработайте `NumberFormatException` и `ArrayIndexOutOfBoundsException`, используя блок multi-catch.
 
+```java
+    Integer.parseInt("text") // throw exction
+```
+
 3. **Использование finally**
     - Напишите программу, которая открывает файл и пытается считать его содержимое. Убедитесь, что файл закрывается в блоке `finally`, даже если возникает исключение.
 
@@ -168,3 +172,10 @@ public void setAge(int age) throws InvalidAgeException {
 
 6. **Связанные Исключения**
     - Напишите программу, которая демонстрирует связанные исключения, поймав одно исключение и выбросив другое с пойманным исключением в качестве причины.
+```java
+    try {
+            Integer.parseInt("text");
+        }catch (Exception e){
+            throw new RuntimeException("Is not a number", e);
+        }
+```
