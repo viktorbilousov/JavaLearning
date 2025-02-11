@@ -147,7 +147,7 @@ public class Main {
 
         // Загрузка данных из файла
         try {
-            service.loadReservationsFromFile("reservations.json");
+            service.loadReservationsFromFile("reservations.txt");
             System.out.println("Данные о бронированиях загружены.");
         } catch (IOException e) {
             System.out.println("Не удалось загрузить бронирования. Файл будет создан.");
