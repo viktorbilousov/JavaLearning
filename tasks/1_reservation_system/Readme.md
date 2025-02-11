@@ -211,3 +211,20 @@ public class Main {
 }
 
 ```
+
+## Пример считывание файла
+```java
+public class FileReaderExample {
+    public static void main(String[] args) {
+        String filename = "reservations.txt"; // Или другой файл
+
+        try {
+            String content = new String(Files.readAllBytes(Paths.get(filename)));
+            System.out.println("Содержимое файла:");
+            System.out.println(content);
+        } catch (IOException e) {
+            System.out.println("Ошибка при чтении файла: " + e.getMessage());
+        }
+    }
+}
+```
