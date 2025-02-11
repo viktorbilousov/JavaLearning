@@ -117,3 +117,97 @@ public class RestaurantBooking {
     - Столик №1 (2 мест) - Свободен
     - Столик №3 (6 мест) - Свободен
 ```
+
+
+# Усложнение: хранение бронирований в файле 
+
+Можно добавить методы `saveReservationsToFile` и `loadReservationsFromFile` в класс `ReservationService` , которые позволят сохранять и загружать данные о бронировании из файла. Это позволит сделать систему более удобной и устойчивой к перезапуску.
+
+## Пример файла 
+
+```text
+1;4;Иван Иванов;+79123456789
+2;2;
+3;6;Мария Петрова;+79234567890
+```
+Где каждая строка значит следующее:
+
+`1`;`4`;`Иван Иванов`;`+79123456789`
+* `1` - первый столик
+* `4` - на 4 мест
+* `Иван Иванов` - резервация на это имя (отсутствует если не зарезервировано)
+* `+79123456789` - резервация на этот номер (отсутствует если не зарезервировано)
+
+
+## Пример Использования
+```java
+public class Main {
+    public static void main(String[] args) {
+        ReservationService service = new ReservationService();
+
+        // Загрузка данных из файла
+        try {
+            service.loadReservationsFromFile("reservations.json");
+            System.out.println("Данные о бронированиях загружены.");
+        } catch (IOException e) {
+            System.out.println("Не удалось загрузить бронирования. Файл будет создан.");
+        }
+
+        // Добавляем столики, если они не загружены из файла
+        if (service.getTables().isEmpty()) {
+            service.addTable(new Table(1, 4));
+            service.addTable(new Table(2, 2));
+            service.addTable(new Table(3, 6));
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("\nМеню:");
+            System.out.println("1. Показать доступные столики");
+            System.out.println("2. Забронировать столик");
+            System.out.println("3. Отменить бронирование");
+            System.out.println("4. Выйти и сохранить данные");
+            System.out.print("Выберите действие: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Считываем символ новой строки
+
+            switch (choice) {
+                case 1:
+                    service.showAvailableTables();
+                    break;
+                case 2:
+                    System.out.print("Введите номер столика: ");
+                    int tableNumber = scanner.nextInt();
+                    scanner.nextLine();
+
+                    System.out.print("Введите имя клиента: ");
+                    String name = scanner.nextLine();
+
+                    System.out.print("Введите телефон клиента: ");
+                    String phone = scanner.nextLine();
+
+                    service.reserveTable(tableNumber, new Customer(name, phone));
+                    break;
+                case 3:
+                    System.out.print("Введите номер столика для отмены брони: ");
+                    int cancelTableNumber = scanner.nextInt();
+                    service.cancelReservation(cancelTableNumber);
+                    break;
+                case 4:
+                    try {
+                        service.saveReservationsToFile("reservations.json");
+                        System.out.println("Данные сохранены. Выход...");
+                    } catch (IOException e) {
+                        System.out.println("Ошибка сохранения данных.");
+                    }
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Неверный выбор, попробуйте снова.");
+            }
+        }
+    }
+}
+
+```
